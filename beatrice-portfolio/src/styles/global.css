@@ -1,0 +1,172 @@
+@import "tailwindcss";
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #c084fc;
+}
+
+/* underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #c084fc;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* button */
+.btn {
+  background: #9333ea;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7e22ce;
+}
+
+
+/* skill tags */
+.skill {
+  background: #1e293b;
+  color: #cbd5f5;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.project-box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  transition: all 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  border-color: #9333ea;
+}
+
+/* highlight card (purple one) */
+.project-box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.project-box:hover {
+  transform: translateY(-6px);
+  border-color: #9333ea;
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.4);
+}
+
+/* optional: subtle purple gradient on hover */
+.project-box:hover {
+  background: linear-gradient(135deg, #111827, #1e1b4b);
+}
+
+/* text styles */
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.project-desc {
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.project-meta {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  gap: 6px;
+}
+
+.exp-card {
+  position: relative;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-top: 50px;
+  transition: 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
+}
+
+/* CARD */
+.exp-card {
+  display: flex;
+  gap: 24px; /* increase from 20px */
+  align-items: flex-start;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  border-color: #9333ea;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.25);
+}
+
+/* LOGO (left side) */
+.exp-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #0f172a;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+/* TEXT CONTENT */
+.exp-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.exp-sub {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.exp-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.exp-list {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9ca3af;
+  list-style: disc;
+  padding-left: 18px;
+}
