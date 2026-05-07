@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-
+import "aos/dist/aos.css";
 const { title = "Portfolio" } = Astro.props;
 ---
 
@@ -13,5 +13,15 @@ const { title = "Portfolio" } = Astro.props;
   </head>
   <body class="bg-gray-50 text-gray-800">
     <slot />
+    <script>
+      import AOS from 'aos';
+      AOS.init({
+        duration: 700,
+        once: true,       // animate only once when scrolled into view
+        easing: 'ease-out-quart',
+        offset: 80,
+      });
+    </script>
   </body>
 </html>
+

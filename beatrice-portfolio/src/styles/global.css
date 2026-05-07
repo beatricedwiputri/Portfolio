@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-link {
   position: relative;
   transition: 0.3s;
@@ -46,6 +51,8 @@
   font-size: 12px;
 }
 
+/* ---------------------------------------------------- */
+
 .project-box {
   background: #111827;
   padding: 20px;
@@ -82,7 +89,7 @@
 
 /* text styles */
 .project-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -100,6 +107,8 @@
   gap: 6px;
 }
 
+/* -------------------------------------------------------- */
+
 .exp-card {
   position: relative;
   background: #0f172a;
@@ -115,7 +124,6 @@
   box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
 }
 
-/* CARD */
 .exp-card {
   display: flex;
   gap: 24px; /* increase from 20px */
@@ -133,7 +141,6 @@
   box-shadow: 0 0 20px rgba(147, 51, 234, 0.25);
 }
 
-/* LOGO (left side) */
 .exp-logo {
   width: 130px;
   height: 130px;
@@ -144,7 +151,6 @@
   flex-shrink: 0;
 }
 
-/* TEXT CONTENT */
 .exp-title {
   font-size: 20px;
   font-weight: 600;
@@ -169,4 +175,216 @@
   color: #9ca3af;
   list-style: disc;
   padding-left: 18px;
+}
+
+/* ------------------------------------------------ */
+
+.edu-item {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  padding-bottom: 45px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 9999px;
+}
+
+.edu-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.edu-sub {
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.edu-desc {
+  margin-top: 10px;
+  color: #d1d5db;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.edu-item {
+  transition: 0.3s;
+}
+
+.edu-item:hover {
+  transform: translateX(6px);
+}
+
+.edu-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+/* ------------------------------------------- */
+
+.cert-card {
+  background: #0f172a;
+
+  border: 1px solid #1f2937;
+  border-radius: 20px;
+
+  padding: 28px;
+
+  transition: all 0.3s ease;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #9333ea;
+
+  box-shadow:
+    0 0 25px rgba(147, 51, 234, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #1e1b4b
+    );
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition: transform 0.4s ease;
+}
+
+.cert-title {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.cert-org {
+  margin-top: 6px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.cert-date {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.cert-button {
+  margin-top: 18px;
+
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #4ade80;
+
+  transition: 0.3s;
+}
+
+.cert-card:hover .cert-button {
+  transform: translateX(4px);
+}
+
+/* ------------------------------------ */
+
+.award-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.award-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.award-date {
+  margin-top: 8px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.award-desc {
+  margin-top: 16px;
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.award-button {
+  font-size: 15px;
+  color: #c391f2;
+}
+
+.award-button:hover {
+  text-decoration: underline;
+}
+
+.award-meta {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #6b7280;
+  display: flex;
+  gap: 6px;
+}
+
+.award-image {
+  min-width: 50%;
+  height: 50%;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  flex-shrink: 0;
+}
+
+.slide-btn {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 9999px;
+
+  background: #1f2937;
+
+  border: 1px solid #374151;
+
+  transition: 0.3s;
+}
+
+.slide-btn:hover {
+  background: #9333ea;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .award-layout {
+    grid-template-columns: 1fr;
+  }
 }
